@@ -1,3 +1,9 @@
+/**
+ * @name Feed.Instagram
+ * @author Malte Zoudlik ma.z0u
+ * @version 1.0.0
+ * @copyright (c) 2019
+ */
 SocialFeed.prototype.buildRequestUrl = function (url, maxId) {
     if (typeof this.params.token === "undefined") {
         console.error('Please define an Access Token. (Generate Access Token here -> http://instagram.pixelunion.net/)');

@@ -1,3 +1,9 @@
+/**
+ * @name Feed
+ * @author Malte Zoudlik ma.z0u
+ * @version 1.0.0
+ * @copyright (c) 2019
+ */
 var SocialFeed = function(selector, params) {
     var instance = {},
         apiRequest = new XMLHttpRequest(),

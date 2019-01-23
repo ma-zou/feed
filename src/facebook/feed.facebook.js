@@ -1,3 +1,9 @@
+/**
+ * @name Feed.Facebook
+ * @author Malte Zoudlik ma.z0u
+ * @version 1.0.0
+ * @copyright (c) 2019
+ */
 SocialFeed.prototype.buildRequestUrl = function (url, maxId) {
     if (typeof this.params.token === "undefined") {
         console.error('Please define an Access Token. (Instruction to generate Access Token can be found here -> https://stackoverflow.com/a/28418469/10616998)');
