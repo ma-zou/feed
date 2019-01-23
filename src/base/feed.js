@@ -1,9 +1,9 @@
 var SocialFeed = function(selector, params) {
     var instance = {},
-        apiRequest = new XMLHttpRequest();
-        requestUrl = 'https://api.instagram.com/v1/users/self/media/recent/?access_token=';
+        apiRequest = new XMLHttpRequest(),
+        requestUrl = this.requestUrl,
         currentUrl = '',
-        _self = this,
+        _self = this;
 
     this.defaults = {
         count: 5,
@@ -49,7 +49,8 @@ var SocialFeed = function(selector, params) {
         return this;
     }
     this.loadMore = function() {
-        if(_self.loadCount < _self.params.loadMax) _self.callRequest(requestUrl, _self.response.pagination.next_max_id);
+        var maxId = _self.getMaxId();
+        if(_self.loadCount < _self.params.loadMax) _self.callRequest(requestUrl, maxId);
     }
 }
 
