@@ -24,7 +24,7 @@ SocialFeed.prototype.createMarkup = function () {
 
     _self.response.data.forEach(function(current) {
         var temp = _self.template;
-        current.content = (current.type === "image") ? '<img src="' + current.images.standard_resolution.url + '" alt="Instagram - ' + current.user.full_name + '">' : '<video src="' + current.videos.standard_resolution.url + '"></video>';
+        current.content = (current.type === "image" || current.type === "carousel") ? '<img src="' + current.images.standard_resolution.url + '" alt="Instagram - ' + current.user.full_name + '">' : '<video src="' + current.videos.standard_resolution.url + '"></video>';
         current.count = _self.counter;
 
         replaceArray.forEach(function(value) {
