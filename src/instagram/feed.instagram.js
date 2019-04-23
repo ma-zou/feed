@@ -28,7 +28,7 @@ SocialFeed.prototype.createMarkup = function () {
         current.count = _self.counter;
 
         replaceArray.forEach(function(value) {
-            temp = temp.replace('{'+value+'}', J.deep_value(current, value));
+            temp = temp.replace('{'+value+'}', J.deepValue(current, value));
         });
 
         markup += temp;
